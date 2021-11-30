@@ -1,4 +1,4 @@
-const contactsOperation = require('../../model')
+const contactsOperation = require('../../model/contacts')
 const { NotFound } = require('http-errors')
 
 const getById = async (req, res, next) => {

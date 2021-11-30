@@ -1,5 +1,5 @@
 const fs = require('fs/promises')
-const contactPath = require('../filePath')
+const contactPath = require('../../helpers/filePath')
 
 const updateContacts = (data) => {
   fs.writeFile(contactPath, JSON.stringify(data))
