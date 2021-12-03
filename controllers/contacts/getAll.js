@@ -1,11 +1,15 @@
-const contactsOperation = require('../../model')
+const { Contact } = require('../../models')
+const { json } = require('express')
 
 const getAll = async (req, res, next) => {
   try {
-    const contacts = await contactsOperation.getListContacts()
+    const contacts = await Contact.find({})
     res.json({
-      message: 'success',
-      data: { contacts },
+      status: 'success',
+      code: 200,
+      data: {
+        contacts
+      }
     })
   } catch (error) {
     next(error)
