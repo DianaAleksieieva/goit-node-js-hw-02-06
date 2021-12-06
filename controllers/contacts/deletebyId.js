@@ -1,4 +1,4 @@
-const contactsOperation = require('../../model')
+const contactsOperation = require('../../models')
 
 const { NotFound } = require('http-errors')
 
