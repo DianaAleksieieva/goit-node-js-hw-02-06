@@ -5,7 +5,12 @@ const contactSchema = Schema({
   name: { type: String, required: [true, 'Set name for contact'] },
   phone: Number,
   email: String,
-  favorite: { Boolean, default: false }
+  favorite: { Boolean, default: false },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'user',
+    required: true
+  }
 }, { versionKey: false, timestamps: true })
 
 const joiSchema = Joi.object({
